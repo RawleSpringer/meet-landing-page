@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroCopy p {
+  width: 80%;
+  text-align: center;
+}
+
+.heroButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heroButtons :nth-child(1) {
+  margin-right: 10px;
+}
+
+.heroButtons button {
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: none;
+}
