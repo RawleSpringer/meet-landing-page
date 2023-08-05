@@ -3,6 +3,10 @@
   import Logo from '../assets/logo.svelte';
   import imgHeroLeft from '../assets/desktop/image-hero-left.png';
   import imgHeroRight from '../assets/desktop/image-hero-right.png';
+  import womanImgDesktop from '../assets/desktop/image-woman-in-videocall.jpg';
+  import womenImgDesktop from '../assets/desktop/image-women-videochatting.jpg';
+  import menImgDesktop from '../assets/desktop/image-men-in-meeting.jpg';
+  import manImgDesktop from '../assets/desktop/image-man-texting.jpg';
 </script>
 
 <div class="container">
@@ -25,12 +29,25 @@
       </div>
       <img class="img-right" src={imgHeroRight} alt="" />
     </section>
-    <section>
-      <ul>
-        <li>1</li>
+    <section class="main-content">
+      <div class="number-line" />
+      <div class="number">01</div>
+      <ul class="img-list">
+        <li class="main-content-image">
+          <img src={womanImgDesktop} alt="woman in videocall" />
+        </li>
+        <li class="main-content-image">
+          <img src={womenImgDesktop} alt="women video chatting" />
+        </li>
+        <li class="main-content-image">
+          <img src={menImgDesktop} alt="men in meeting" />
+        </li>
+        <li class="main-content-image">
+          <img src={manImgDesktop} alt="man texting" />
+        </li>
       </ul>
 
-      <div>
+      <div class="main-content-copy">
         <p>Built for modern use</p>
         <h2>Smarter meetings, all in one place</h2>
         <p>
@@ -55,7 +72,7 @@
   header {
     display: flex;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 141px;
   }
 
   .hero {
@@ -116,6 +133,7 @@
     top: 0;
     left: 0;
     margin-left: -40px;
+    margin-top: -40px;
   }
 
   .img-right {
@@ -124,5 +142,79 @@
     right: 0;
     margin-right: -40px;
     margin-top: 40px;
+  }
+
+  .main-content {
+    padding-top: 32rem;
+    position: relative;
+    max-width: 111rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .number-line {
+    border-left: solid hsl(240, 10%, 57%) 1px;
+    height: 84px;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    top: 116px;
+  }
+
+  .number {
+    position: absolute;
+    border: hsl(240, 10%, 57%) 1px solid;
+    border-radius: 50%;
+    top: 200px;
+    left: 47.6%;
+    line-height: 56px;
+    width: 56px;
+    text-align: center;
+    color: hsl(240, 10%, 57%);
+  }
+
+  .img-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    height: 242px;
+  }
+
+  .main-content-image {
+    height: 100%;
+    width: 255px;
+  }
+
+  .main-content-image img {
+    border-radius: 10px;
+  }
+
+  .main-content-copy {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .main-content-copy h2 {
+    width: 445px;
+    font-size: 4rem;
+    line-height: 44px;
+    color: hsl(240, 21%, 20%);
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  .main-content-copy p:first-child {
+    text-transform: uppercase;
+    color: hsl(192, 37%, 48%);
+    line-height: 26px;
+    letter-spacing: 4px;
+    font-weight: bold;
   }
 </style>

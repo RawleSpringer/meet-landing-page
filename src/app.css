@@ -4,6 +4,8 @@
   box-sizing: border-box;
   margin-block-start: 0;
   margin-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
 }
 
 html {
@@ -21,6 +23,7 @@ body {
   background-color: hsl(0, 0%, 98%);
   font-family: 'Red Hat Display Variable', sans-serif;
   font-size: 1.8rem;
+  line-height: 26px;
   padding-top: 80px;
   color: hsl(240, 10%, 57%);
 }
