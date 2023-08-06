@@ -7,6 +7,7 @@
   import womenImgDesktop from '../assets/desktop/image-women-videochatting.jpg';
   import menImgDesktop from '../assets/desktop/image-men-in-meeting.jpg';
   import manImgDesktop from '../assets/desktop/image-man-texting.jpg';
+  import heroTablet from '../assets/tablet/image-hero.png';
 </script>
 
 <div class="container">
@@ -15,6 +16,7 @@
   </header>
   <main>
     <section class="hero">
+      <img class="hero-img-tablet" src={heroTablet} alt="" />
       <img class="img-left" src={imgHeroLeft} alt="" />
       <div class="hero-content">
         <h1>Group Chat For Everyone</h1>
@@ -73,10 +75,14 @@
 </div>
 
 <style>
-  header {
+  /* header {
     display: flex;
     justify-content: center;
     margin-bottom: 141px;
+  } */
+
+  .hero-img-tablet {
+    display: none;
   }
 
   main {
@@ -120,6 +126,14 @@
     margin-right: 16px;
     font-size: 1.6rem;
     font-weight: bold;
+  }
+
+  .cta button:first-child:hover {
+    background-color: #71c0d4;
+  }
+
+  .cta button:last-child:hover {
+    background-color: #b18bdd;
   }
 
   .cta button:last-child {
@@ -228,10 +242,22 @@
   footer {
     margin-top: 184px;
     height: 308px;
-    background-color: hsl(192, 37%, 48%);
     display: flex;
     align-items: center;
     position: relative;
+    background-image: url('../assets/desktop/image-footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    isolation: isolate;
+  }
+
+  footer::after {
+    content: '';
+    position: absolute;
+    background-color: hsl(192, 37%, 48%);
+    inset: 0;
+    z-index: -1;
+    opacity: 0.8;
   }
 
   .footer-container {
@@ -270,6 +296,10 @@
     font-weight: bold;
   }
 
+  .footer-container button:hover {
+    background-color: #b18bdd;
+  }
+
   .number-line-2 {
     border-left: solid hsl(240, 10%, 57%) 1px;
     height: 84px;
@@ -290,5 +320,72 @@
     width: 56px;
     text-align: center;
     color: hsl(240, 10%, 57%);
+  }
+
+  /* TABLET */
+  @media (max-width: 76.8rem) {
+    header {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 141px;
+    }
+
+    .img-left {
+      display: none;
+    }
+
+    .img-right {
+      display: none;
+    }
+
+    .hero-img-tablet {
+      display: block;
+      max-width: 100%;
+      height: 303px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow-x: clip;
+    }
+
+    .hero-content {
+      margin-top: 72px;
+    }
+
+    .img-list {
+      max-width: 689;
+    }
+
+    footer {
+      height: 428px;
+      padding: 92px 0px 66px 0px;
+    }
+
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+      height: 100%;
+    }
+
+    .footer-tag-line {
+      max-width: 457px;
+      margin-right: 0px;
+    }
+
+    .footer-text {
+      max-width: 573px;
+      margin-right: 0px;
+      margin-top: 32px;
+    }
+
+    .footer-container button {
+      margin-right: 0px;
+      margin-top: 40px;
+    }
   }
 </style>
