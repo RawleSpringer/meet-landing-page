@@ -7,7 +7,7 @@
   import womenImgDesktop from '../assets/desktop/image-women-videochatting.jpg';
   import menImgDesktop from '../assets/desktop/image-men-in-meeting.jpg';
   import manImgDesktop from '../assets/desktop/image-man-texting.jpg';
-  import heroTablet from '../assets/tablet/image-hero.png';
+  import heroImgTablet from '../assets/tablet/image-hero.png';
 </script>
 
 <div class="container">
@@ -16,7 +16,7 @@
   </header>
   <main>
     <section class="hero">
-      <img class="hero-img-tablet" src={heroTablet} alt="" />
+      <img class="hero-img-tablet" src={heroImgTablet} alt="" />
       <img class="img-left" src={imgHeroLeft} alt="" />
       <div class="hero-content">
         <h1>Group Chat For Everyone</h1>
@@ -75,11 +75,11 @@
 </div>
 
 <style>
-  /* header {
+  header {
     display: flex;
     justify-content: center;
     margin-bottom: 141px;
-  } */
+  }
 
   .hero-img-tablet {
     display: none;
@@ -324,12 +324,6 @@
 
   /* TABLET */
   @media (max-width: 76.8rem) {
-    header {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 141px;
-    }
-
     .img-left {
       display: none;
     }
@@ -361,11 +355,6 @@
       max-width: 689;
     }
 
-    footer {
-      height: 428px;
-      padding: 92px 0px 66px 0px;
-    }
-
     .footer-container {
       flex-direction: column;
       text-align: center;
@@ -386,6 +375,104 @@
     .footer-container button {
       margin-right: 0px;
       margin-top: 40px;
+    }
+
+    footer {
+      height: 428px;
+      padding: 92px 0px 66px 0px;
+      background-image: url('../assets/tablet/image-footer.jpg');
+    }
+  }
+
+  /* MOBILE */
+
+  @media (max-width: 37.6rem) {
+    .hero-content {
+      max-width: 327px;
+      font-size: 1.6rem;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+      line-height: 44px;
+    }
+
+    .hero-content p {
+      line-height: 26px;
+    }
+
+    .cta {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta button:first-child {
+      margin-right: 0;
+      width: 193px;
+    }
+
+    .cta button:last-child {
+      margin-right: 0;
+      margin-top: 16px;
+      width: 139px;
+    }
+
+    .main-content {
+      max-width: 32.7rem;
+    }
+
+    .main-content-copy h2 {
+      width: 327px;
+      font-size: 3.2rem;
+      line-height: 36px;
+      margin-top: 24px;
+      margin-bottom: 32px;
+    }
+
+    .main-content-copy p:first-child {
+      text-transform: uppercase;
+      color: hsl(192, 37%, 48%);
+      letter-spacing: 4px;
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+
+    .main-content-copy p:last-child {
+      font-size: 1.6rem;
+    }
+
+    .img-list {
+      max-width: 32.7rem;
+      flex-wrap: wrap;
+      height: 310px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .main-content-image {
+      height: 143px;
+      width: 151px;
+    }
+
+    footer {
+      height: 428px;
+      padding: 92px 0px 66px 0px;
+      background-image: url('../assets/mobile/image-footer.jpg');
+    }
+
+    .footer-container {
+      max-width: 32.7rem;
+    }
+
+    .footer-tag-line {
+      font-size: 3.2rem;
+      line-height: 36px;
+    }
+
+    .footer-text {
+      max-width: 350px;
     }
   }
 </style>
