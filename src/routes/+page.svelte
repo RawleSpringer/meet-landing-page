@@ -32,8 +32,10 @@
       <img class="img-right" src={imgHeroRight} alt="" />
     </section>
     <section class="main-content">
-      <div class="number-line-1" />
-      <div class="number-1">01</div>
+      <div class="number-container-1">
+        <div class="number-line-1" />
+        <div class="number-1">01</div>
+      </div>
       <ul class="img-list">
         <li class="main-content-image">
           <img src={womanImgDesktop} alt="woman in videocall" />
@@ -60,10 +62,12 @@
       </div>
     </section>
   </main>
+  <div class="number-container-2">
+    <div class="number-line-2" />
+    <div class="number-2">02</div>
+  </div>
   <footer>
     <div class="footer-container">
-      <div class="number-line-2" />
-      <div class="number-2">02</div>
       <p class="footer-tag-line">Experience more together</p>
       <p class="footer-text">
         Stay connected with reliable HD meetings and unlimited one-on-one and
@@ -86,7 +90,6 @@
   }
 
   main {
-    position: relative;
   }
 
   .hero {
@@ -167,31 +170,32 @@
   }
 
   .main-content {
-    padding-top: 32rem;
+    padding-top: 8rem;
     max-width: 111rem;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .number-container-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .number-line-1 {
     border-left: solid hsl(240, 10%, 57%) 1px;
     height: 84px;
     width: 1px;
-    position: absolute;
-    left: 50%;
-    top: 421px;
   }
 
   .number-1 {
-    position: absolute;
     border: hsl(240, 10%, 57%) 1px solid;
     border-radius: 50%;
-    top: 504px;
-    left: 48.2%;
     line-height: 56px;
     width: 56px;
     text-align: center;
     color: hsl(240, 10%, 57%);
+    margin-bottom: 6.4rem;
   }
 
   .img-list {
@@ -203,7 +207,7 @@
   }
 
   .main-content-image {
-    height: 100%;
+    height: 242px;
     width: 255px;
   }
 
@@ -240,7 +244,6 @@
   }
 
   footer {
-    margin-top: 184px;
     height: 308px;
     display: flex;
     align-items: center;
@@ -300,22 +303,26 @@
     background-color: #b18bdd;
   }
 
+  .number-container-2 {
+    margin-top: 80px;
+    margin-bottom: -30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
   .number-line-2 {
     border-left: solid hsl(240, 10%, 57%) 1px;
     height: 84px;
     width: 1px;
-    position: absolute;
-    left: 50%;
-    top: -110px;
   }
 
   .number-2 {
-    position: absolute;
     border: hsl(240, 10%, 57%) 1px solid;
     background-color: hsl(0, 0%, 98%);
     border-radius: 50%;
-    top: -26px;
-    left: 48.2%;
     line-height: 56px;
     width: 56px;
     text-align: center;
@@ -324,6 +331,9 @@
 
   /* TABLET */
   @media (max-width: 76.8rem) {
+    header {
+      margin-bottom: 439px;
+    }
     .img-left {
       display: none;
     }
@@ -334,29 +344,40 @@
 
     .hero-img-tablet {
       display: block;
-      max-width: 100%;
+      min-width: 110%;
       height: 303px;
+      position: absolute;
+      top: 0;
+      margin-top: -375px;
     }
 
     .hero {
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      align-items: center;
-      position: relative;
-      overflow-x: clip;
     }
 
     .hero-content {
       margin-top: 72px;
     }
 
+    .main-content-copy {
+      max-width: 573px;
+    }
+
+    .main-content-copy p:last-child {
+      font-size: 1.6rem;
+    }
+
     .img-list {
-      max-width: 689;
+      max-width: 689px;
+      margin-left: auto;
+      margin-right: auto;
+      gap: 11px;
     }
 
     .footer-container {
       flex-direction: column;
+      justify-content: center;
       text-align: center;
       height: 100%;
     }
@@ -364,6 +385,7 @@
     .footer-tag-line {
       max-width: 457px;
       margin-right: 0px;
+      margin-top: 92px;
     }
 
     .footer-text {
@@ -375,11 +397,13 @@
     .footer-container button {
       margin-right: 0px;
       margin-top: 40px;
+      height: 58px;
+      width: 193px;
     }
 
     footer {
       height: 428px;
-      padding: 92px 0px 66px 0px;
+      padding: 0px 0px 66px 0px;
       background-image: url('../assets/tablet/image-footer.jpg');
     }
   }
@@ -387,6 +411,9 @@
   /* MOBILE */
 
   @media (max-width: 37.6rem) {
+    header {
+      margin-bottom: 255px;
+    }
     .hero-content {
       max-width: 327px;
       font-size: 1.6rem;
@@ -419,6 +446,12 @@
       width: 139px;
     }
 
+    .hero-img-tablet {
+      width: 100%;
+      height: 153px;
+      margin-top: -153px;
+    }
+
     .main-content {
       max-width: 32.7rem;
     }
@@ -439,10 +472,6 @@
       font-size: 1.6rem;
     }
 
-    .main-content-copy p:last-child {
-      font-size: 1.6rem;
-    }
-
     .img-list {
       max-width: 32.7rem;
       flex-wrap: wrap;
@@ -457,22 +486,24 @@
     }
 
     footer {
-      height: 428px;
-      padding: 92px 0px 66px 0px;
       background-image: url('../assets/mobile/image-footer.jpg');
+      /* padding-bottom: 72px; */
     }
 
     .footer-container {
       max-width: 32.7rem;
+      height: 100%;
     }
 
     .footer-tag-line {
       font-size: 3.2rem;
       line-height: 36px;
+      height: 72px;
     }
 
     .footer-text {
       max-width: 350px;
+      height: 78px;
     }
   }
 </style>
